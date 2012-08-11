@@ -1,0 +1,24 @@
+export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_10_2
+export SQLPATH=/opt/oracle/instantclient_10_2
+export ORACLE_HOME=/opt/oracle/instantclient_10_2
+export TNS_ADMIN=/opt/oracle/instantclient_10_2
+export CC=/usr/bin/gcc-4.2
+export PATH=$PATH:$DYLD_LIBRARY_PATH
+export PATH=$PATH:~/bin
+
+alias v='mvim -v'
+alias vi='mvim -v'
+alias vim='mvim -v'
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+alias wget="curl -O"
+
+##
+# Your previous /Users/xli/.bash_profile file was backed up as /Users/xli/.bash_profile.macports-saved_2012-06-04_at_17:31:10
+##
+
+# MacPorts Installer addition on 2012-06-04_at_17:31:10: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
