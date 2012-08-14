@@ -22,3 +22,37 @@ alias wget="curl -O"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# Functions for colorizing Bash prompt when working with Git or Mercurial
+# repositories.
+function git-parse-dirty {
+  MESSAGE="nothing to commit (working directory clean)"
+  [[ $(git status 2> /dev/null | tail -n1) != $MESSAGE ]] && echo "*"
+}
+
+function git-parse-branch {
+  git branch --no-color 2> /dev/null |
+  sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(git-parse-dirty)\)/"
+}
+
+function promptcolors {
+  local BLUE="\[\033[0;34m\]"
+  local RED="\[\033[0;31m\]"
+  local GREEN="\[\033[0;32m\]"
+  local WHITE="\[\033[1;37m\]"
+  local CYAN="\[\033[0;36m\]"
+  local PURPLE="\[\033[0;35m\]"
+  local BROWN="\[\033[0;33m\]"
+  local YELLOW="\[\033[1;33m\]"
+  local LIGHT_BLUE="\[\033[1;30m\]"
+  local LIGHT_RED="\[\033[1;31m\]"
+  local LIGHT_GREEN="\[\033[1;32m\]"
+  local LIGHT_GRAY="\[\033[0;37m\]"
+  local LIGHT_CYAN="\[\033[1;36m\]"
+  local LIGHT_PURPLE="\[\033[1;35m\]"
+  local COLOR=$LIGHT_RED
+  PS1="$COLOR[\u@\h:\W$RED\$(git-parse-branch)$COLOR]\$\[\033[0m\] "
+  PS2='> '
+  PS4='+ '
+}
+
+promptcolors
