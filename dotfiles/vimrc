@@ -183,8 +183,8 @@ let g:miniBufExplUseSingleClick = 1
 " C = ctrl
 
 "buffers
-map <C-p> <Esc>:bn<CR>
-map <C-o> <Esc>:bp<CR>
+map <C-[> <Esc>:bn<CR>
+map <C-]> <Esc>:bp<CR>
 map <C-d> <Esc>:bd<CR>
 
 "alt keys
@@ -211,7 +211,7 @@ onoremap <F9> <C-C>zi
 vnoremap <F9> zi
 
 "fuzzy finder with ctrl+p
-let g:ctrlp_map = '<c-f>'
+let g:ctrlp_map = '<c-p>'
 
 nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
