@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/usr/local/src/lui/app/views'
-let g:netrw_dirhist_2='/usr/local/src/lui/app'
-let g:netrw_dirhist_3='/usr/local/src/lui'
-let g:netrw_dirhist_4='/usr/local/src/lui/app'
-let g:netrw_dirhist_5='/usr/local/src/lui/app/helpers'
-let g:netrw_dirhist_6='/usr/local/src/lui'
-let g:netrw_dirhist_7='/usr/local/src/lui/config'
