@@ -3,3 +3,16 @@ set nocompatible
 filetype off 
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+
+set number
+
+let mapleader=','
+let g:ctrlp_map='<c-t>'
+
+nmap <c-p> :bnext<cr>
+nmap <c-o> :bprev<cr>
+
+syntax on
+syntax enable
+set background=dark
+colorscheme solarized
