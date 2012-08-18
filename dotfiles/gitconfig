@@ -6,3 +6,7 @@
 	token = f291b4e3ca36c5693c00edcaa2443166
 [alias]
 	ci = commit
+	st = status
+	br = branch
+	co = checkout
+
