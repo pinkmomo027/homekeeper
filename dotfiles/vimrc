@@ -10,12 +10,14 @@ set softtabstop=2
 set smartindent
 set tabstop=2
 set autoindent
+set hlsearch
 
 let mapleader=','
 let g:ctrlp_map='<c-t>'
 
 nmap <c-p> :bnext<cr>
 nmap <c-o> :bprev<cr>
+nmap <leader><space> :set hlsearch!<cr>
 
 syntax on
 syntax enable
