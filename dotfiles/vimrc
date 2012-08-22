@@ -5,12 +5,16 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
 set number
+set background=dark
 set smarttab
+set autoindent
 set softtabstop=2
 set smartindent
 set tabstop=2
-set autoindent
+set shiftwidth=2
+set expandtab
 set hlsearch
+set showmode
 
 let mapleader=','
 let g:ctrlp_map='<c-t>'
@@ -21,5 +25,4 @@ nmap <leader><space> :set hlsearch!<cr>
 
 syntax on
 syntax enable
-set background=dark
 colorscheme mango
